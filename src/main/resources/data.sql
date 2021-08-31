@@ -1,0 +1,1 @@
+insert into province(name,capital)VALUES("West Sumatera","Padang");
