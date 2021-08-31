@@ -7,10 +7,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 @Table(name="province")
 public class Province {
-    private @GeneratedValue @Id Long id;
+    private @GeneratedValue @Id  Long id;
     private String name;
     private String capital;
     
@@ -21,6 +23,13 @@ public class Province {
         this.capital = capital;
     }
 
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return this.name;
@@ -37,6 +46,5 @@ public class Province {
     public void setCapital(String capital) {
         this.capital = capital;
     }
-
     
 }
